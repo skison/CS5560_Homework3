@@ -1,0 +1,83 @@
+
+/*Simplify page to a simple rectangle holding the relevant information*/
+body{
+	margin: auto;
+	text-align: center;
+	color: white!important; /*Override default black text color*/	
+}
+h1{
+	text-align: center;
+}
+/*format header*/
+.header{
+	margin: 20px;
+	padding: 10px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	width: 60%;
+	background: linear-gradient(to bottom right, #771ea8, #c56af7, #771ea8);
+	border-radius: 15px;
+	border-style: solid;
+	border-color: #2f1d8e;
+	border-width: 3px;
+}
+
+/*bright blue links*/
+a:link, a:visited {
+    color: #64fcf4;
+}
+a:hover {
+    color: #4cd7ef;
+}
+a:active {
+    color: #308cc1;
+}
+
+/*white text for delete button*/
+a[data-method="delete"]{
+	color: white;
+}
+
+/*format main pages*/
+.page{
+	margin: 20px;
+	padding: 10px;
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	width: 60%;
+	background: linear-gradient(to bottom right, #2f1d8e, #846ffc, #2f1d8e);
+	border-radius: 15px;
+	border-style: solid;
+	border-color: #2f1d8e;
+	border-width: 3px;
+}
+.panel-group {
+    margin-bottom: 10px!important; /*Override bootstrap panel group margins*/
+	color: black; /*black text inside panels*/
+}
+.panel-title{
+	display: inline;
+	margin: 5px;
+}
+.panel-heading{
+	min-height: 34px;
+}
+form input{
+	width: 100%;
+}
+form input[type=submit]{
+	width: 50%;
+}
+form{
+	text-align: center;
+	background: linear-gradient(to bottom left, #1c2ea0, #2f46d8, #1c2ea0);
+	padding: 10px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #2f46d8;
+}
+.form-group{
+	text-align: left;
+}

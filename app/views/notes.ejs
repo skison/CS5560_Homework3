@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<!-- Import css -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Import Bootstrap & JQuery (found at https://www.w3schools.com/bootstrap/bootstrap_get_started.asp)-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<% include ./header %>
+		<div class="page">
+			<h1><%= title %></h1>
+			<h2>Subject</h2>
+			
+				<% 
+				for(var i=0; i < noteList.length; i++){
+					%><tr>
+						<td>
+							<div class="panel-group">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<a data-method="delete" class="btn btn-danger" href="/notes?deleteid=<%= noteList[i]._id %>">
+											<span class="glyphicon glyphicon-remove"></span> Delete
+										</a>
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#collapse<%= i %>"><%= noteList[i].subject %></a>
+										</h4>	
+									</div>
+									<div id="collapse<%= i %>" class="panel-collapse collapse">
+										<div class="panel-body"><%= noteList[i].body %></div>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr><%
+				}
+				%>
+			
+			<form action="/notes" method="post">
+				<h2>Add Note:</h2>
+				<div class="form-group">
+					<label for="subject">Subject:</label>
+					<input type="text" class="form-control" placeholder="Enter subject" name="subject">
+				</div>
+				<div class="form-group">
+					<label for="body">Body:</label>
+					<input type="text" class="form-control" placeholder="Enter description" name="body">
+				</div>
+				<input type="submit" value="Add Note" class="btn btn-default">
+			</form>
+			
+		</div>
+	</body>
+</html>
