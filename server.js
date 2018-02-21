@@ -8,7 +8,7 @@ var db = mongoose();
 var app = express();
 var passport = passport();
 
-app.listen(80);
+app.listen(3000);
 module.exports = app;
 
 console.log('Server running: ' + app);
