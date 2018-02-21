@@ -11,4 +11,4 @@ var passport = passport();
 app.listen(3000);
 module.exports = app;
 
-console.log('Server running: ' + app);
+console.log('Server running on port 3000!');
